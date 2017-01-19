@@ -57,37 +57,38 @@ function printNumbers(i, end) {
 printNumbers(1, 10)
 
 function rockPaperScissors(first, second) {
+    if (first == second) {
+        console.log('Draw');
+        return;
+    }
     if (first == 'rock') {
-        if (second == 'rock'){
-            console.log('draw');
-        }
         if (second == 'paper'){
             console.log('player 2');
+            return;
         }
         if (second == 'scissors'){
             console.log('player 1');
+            return;
         }
     }
     if (first == 'paper') {
         if (second == 'rock'){
             console.log('player 1');
-        }
-        if (second == 'paper'){
-            console.log('draw');
+            return;
         }
         if (second == 'scissors'){
             console.log('player 2');
+            return;
         }
     }
     if (first == 'scissors') {
         if (second == 'rock'){
             console.log('player 2');
+            return;
         }
         if (second == 'paper'){
             console.log('player 1');
-        }
-        if (second == 'scissors'){
-            console.log('draw');
+            return;
         }
     }
 }
@@ -99,7 +100,7 @@ function printSquare(n) {
     var str = '*'
     while (lines < n) {
         lines++;
-        str.repeat(n);
+        console.log(str.repeat(n));
     }
 }
 
